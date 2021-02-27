@@ -1,18 +1,20 @@
 
 let graphics=["♦", "♥", "♠", "♣"];
 let simbol=["A","2","3","4","5","6","7","8","9","10","J"," Q","K"];
-function randomGraphics(){ 
-let graphicsRandom=Math.floor(Math.random() * graphics.length);
- return graphics[graphicsRandom];
-}
-function randomSimbols (){
-    let simbolRandom=Math.floor(Math.random() * simbol.length);
-    return simbol[simbolRandom];
-}
 
 window.onload = () => {
-document.querySelector(".random").innerHTML=randomGraphics();
+ 
+let graphicsRandom=Math.floor(Math.random() * graphics.length);
+let simbolRandom=Math.floor(Math.random() * simbol.length);
+let finalGraphic=graphics[graphicsRandom];
+let finalsimbol=simbol[simbolRandom];
 
-document.querySelector("#number").innerHTML=randomSimbols();
+
+   
+
+let element1= document.querySelector(".random").innerHTML=finalGraphic;
+let element2=document.querySelector(".random2").innerHTML=finalGraphic;
+
+let element3=document.querySelector("#number").innerHTML=finalsimbol;
   
 }
